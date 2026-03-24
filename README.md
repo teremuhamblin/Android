@@ -3,24 +3,21 @@ README.md —
 `
 
 ---
-<p align="left">
-🐺 ANDROID SYSTEM
-
-Projet de documentation & exploration du système Android</p>
-
-<br/>
-
-`███████╗██╗  ██╗███████╗     ███╗   ███╗ █████╗ ██████╗ ██████╗ 
-██╔════╝██║  ██║██╔════╝     ████╗ ████║██╔══██╗██╔══██╗██╔══██╗`
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Device-Android%20Tablet-0A0F0D?style=for-the-badge&logo=android&logoColor=00FF9D">
-  <img src="https://img.shields.io/badge/Mode-Dark%20Hacker-00FF9D?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Status-Work%20in%20Progress-00B8FF?style=for-the-badge">
+🐺 ANDROID SYSTEM
+Projet de documentation & exploration du système Android</p>
+
+
+### ███████╗ ██╗  ██╗   ███████╗
+
+---
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Device-Android-8A2BE2?style=for-the-badge&logo=android&logoColor=white">
+  <img src="https://img.shields.io/badge/Status-Work%20in%20Progress-8A2BE2?style=for-the-badge&logo=android&logoColor=white">
   <br>
-  <img src="https://img.shields.io/badge/Focus-System%20Internals-8A2BE2?style=flat-square">
-  <img src="https://img.shields.io/badge/License-CC0%201.0-111111?style=flat-square">
-  <img src="https://img.shields.io/badge/Maintainer-Teremu-444444?style=flat-square">
+  
 </p>
 
 ---
