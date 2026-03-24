@@ -36,18 +36,6 @@ juste de la connaissance structurée, orientée Android / tablette.
 
 ---
 
-🗂️ Structure
-
-Voir la section docs/ pour :
-
-- 00-intro/ : vue d’ensemble, glossaire  
-- 10-system/ : architecture, boot, partitions  
-- 20-security/ : permissions, sandbox, hardening  
-- 30-tools/ : ADB, logcat, exploration  
-- 90-misc/ : références, notes perso  
-
----
-
 🧩 Comment utiliser ce dépôt
 
 - Lire les fichiers dans docs/ directement depuis l’interface Git ou sur tablette  
