@@ -8,49 +8,7 @@ Tu pourras ensuite l’adapter, remplir les fichiers, et le pousser sur Git.
 
 ---
 
-🗂️ Arborescence complète du projet
 
-`text
-The-MadDoG-Android-System/
-│
-├── README.md                 # Présentation du projet
-├── LICENSE                   # CC0 1.0 (ou autre CC si tu changes d’avis)
-├── .gitignore                # Adapté Android + doc
-│
-├── docs/
-│   ├── 00-intro/
-│   │   ├── overview-android.md
-│   │   └── glossary.md
-│   ├── 10-system/
-│   │   ├── architecture.md
-│   │   ├── boot-process.md
-│   │   └── partitions.md
-│   ├── 20-security/
-│   │   ├── permissions.md
-│   │   ├── sandboxing.md
-│   │   └── hardening-notes.md
-│   ├── 30-tools/
-│   │   ├── adb-basics.md
-│   │   ├── logcat-notes.md
-│   │   └── file-system-exploration.md
-│   └── 90-misc/
-│       ├── references.md
-│       └── personal-notes.md
-│
-├── media/
-│   ├── logos/
-│   │   ├── maddog-ascii.txt
-│   │   └── maddog-android-dark.png
-│   └── diagrams/
-│       ├── android-architecture.png
-│       └── partitions-layout.png
-│
-└── drafts/
-    ├── raw-notes-android.txt
-    └── ideas.md
-`
-
----
 
 🧹 .gitignore adapté Android + doc
 
