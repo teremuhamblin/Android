@@ -3,9 +3,9 @@
 `text
 The-MadDoG-Android-System/
 │
-├── README.md                 # Présentation du projet
-├── LICENSE                   # CC0 1.0 (ou autre CC si tu changes d’avis)
-├── .gitignore                # Adapté Android + doc
+├── README.md     # Présentation du projet
+├── LICENSE       # CC0 1.0 (ou autre CC)
+├── .gitignore    # Adapté Android + doc
 │
 ├── docs/
 │   ├── 00-intro/
@@ -39,5 +39,17 @@ The-MadDoG-Android-System/
     ├── raw-notes-android.txt
     └── ideas.md
 `
+
+---
+
+🗂️ Structure complète 
+
+Voir la section docs/ pour :
+
+- 00-intro/ : vue d’ensemble, glossaire  
+- 10-system/ : architecture, boot, partitions  
+- 20-security/ : permissions, sandbox, hardening  
+- 30-tools/ : ADB, logcat, exploration  
+- 90-misc/ : références, notes perso  
 
 ---
