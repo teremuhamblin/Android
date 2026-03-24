@@ -1,12 +1,15 @@
+<p align="right">
 README.md — 
-`markdown
-`
+markdown
+
+</p>
 
 ---
 
 <p align="center">
 🐺 ANDROID SYSTEM
-Projet de documentation & exploration du système Android</p>
+</p>
+- Projet de documentation & exploration du système Android
 
 
 ### ███████╗ ██╗  ██╗   ███████╗
