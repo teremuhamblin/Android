@@ -1,7 +1,7 @@
 # These are supported funding model platforms
 
 github:
-  - ton-pseudo-github
+  - null
 
 custom:
   # Liens Android officiels
