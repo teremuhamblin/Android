@@ -3,7 +3,7 @@ README.md —
 `
 
 ---
-<p align="center">
+<p align="left">
 🐺 ANDROID SYSTEM
 
 Projet de documentation & exploration du système Android</p>
