@@ -1,0 +1,14 @@
+# These are supported funding model platforms
+
+github:
+  - ton-pseudo-github
+
+custom:
+  # Liens Android officiels
+  - https://developer.android.com
+  - https://source.android.com
+  - https://android-developers.googleblog.com
+  - https://android.com
+
+  # Liens de soutien supplémentaires
+  - null
