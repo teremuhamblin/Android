@@ -1,18 +1,14 @@
 <p align="right">
 README.md — 
 markdown
-
 </p>
 
 ---
 
 <p align="center">
 🐺 ANDROID SYSTEM
+(projet de documentation du système Android)
 </p>
-- Projet de documentation & exploration du système Android
-
-
-### ███████╗ ██╗  ██╗   ███████╗
 
 ---
 
@@ -70,7 +66,7 @@ Tu peux réutiliser, copier, modifier, sans aucune restriction.
 
 🐾 Signature
 
-> “The MadDoG — Android, système, traces invisibles.”
+> “The MadDoG — Android.”
 `
 
 ---
