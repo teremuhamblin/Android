@@ -1,0 +1,58 @@
+flowchart TD
+
+    A[Architecture de sécurité Android]:::root
+
+    A --> B1[Matériel & Chaîne de confiance]
+    A --> B2[Noyau Linux renforcé]
+    A --> B3[SELinux & Confinement]
+    A --> B4[Sandboxing applicatif]
+    A --> B5[Permissions & Contrôle d'accès]
+    A --> B6[Chiffrement & Protection des données]
+    A --> B7[Profils & Virtualisation]
+    A --> B8[Sécurité dynamique & Écosystème]
+
+    B1 --> C1[Bootloader vérifié]
+    B1 --> C2[Verified Boot / AVB]
+    B1 --> C3[dm-verity]
+    B1 --> C4[TEE / StrongBox]
+
+    B2 --> D1[UID/GID Linux]
+    B2 --> D2[Namespaces]
+    B2 --> D3[Cgroups]
+    B2 --> D4[ASLR, NX]
+    B2 --> D5[Seccomp]
+
+    B3 --> E1[Domaines SELinux]
+    B3 --> E2[Règles MAC]
+    B3 --> E3[Confinement des services]
+
+    B4 --> F1[UID unique par app]
+    B4 --> F2[Domaine SELinux restreint]
+    B4 --> F3[Isolated processes]
+    B4 --> F4[WebView sandbox]
+
+    B5 --> G1[Permissions runtime]
+    B5 --> G2[Permissions dangereuses]
+    B5 --> G3[API contrôlées]
+    B5 --> G4[Restrictions d’arrière-plan]
+
+    B6 --> H1[FBE]
+    B6 --> H2[KeyStore matériel]
+    B6 --> H3[Clés dérivées du code]
+
+    B7 --> I1[Profils utilisateurs]
+    B7 --> I2[Work Profile]
+    B7 --> I3[Containers OEM]
+    B7 --> I4[Virtualization Framework]
+
+    B8 --> J1[Play Protect]
+    B8 --> J2[Project Mainline]
+    B8 --> J3[Mises à jour mensuelles]
+    B8 --> J4[Signature APK]
+
+    classDef root fill:#222,color:#fff,stroke:#555,stroke-width:2px;
+    classDef layer fill:#333,color:#fff,stroke:#666;
+    classDef detail fill:#444,color:#eee,stroke:#777;
+
+    class B1,B2,B3,B4,B5,B6,B7,B8 layer;
+    class C1,C2,C3,C4,D1,D2,D3,D4,D5,E1,E2,E3,F1,F2,F3,F4,G1,G2,G3,G4,H1,H2,H3,I1,I2,I3,I4,J1,J2,J3,J4 detail;
