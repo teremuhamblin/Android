@@ -1,6 +1,8 @@
+VERSION 1
+
 ---
 
-📁 media/ — Guide d’utilisation des médias Android
+📁 media/ — Guide d’utilisation des médias Android 1
 
 Ce document décrit la structure, les conventions et les bonnes pratiques pour gérer les fichiers multimédias du projet The MadDoG Android System.  
 Il sert de référence pour maintenir une identité visuelle cohérente et une documentation claire.
