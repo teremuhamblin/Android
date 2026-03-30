@@ -1,13 +1,13 @@
 <p align="right"> 
-Android - README — 
-markdown
+>> markdown
 </p>
-
 
 ---
 
 <p align="center">
 🐺 ANDROID SYSTEM
+</p>
+<p align="center">
 (projet de documentation du système Android)
 </p>
 
@@ -47,6 +47,5 @@ Tu peux réutiliser, copier, modifier, sans aucune restriction.
 🐾 Signature
 
 > “The MadDoG — Android.”
-`
 
 ---
