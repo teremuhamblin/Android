@@ -1,0 +1,27 @@
+flowchart TD
+
+    A[Chaîne de confiance du boot Android]:::root
+
+    A --> B1[Bootloader]
+    A --> B2[Verified Boot]
+    A --> B3[dm-verity]
+    A --> B4[Démarrage du système]
+
+    B1 --> C1[Clé OEM]
+    B1 --> C2[Verrouillage du bootloader]
+
+    B2 --> D1[AVB]
+    B2 --> D2[Vérification cryptographique des partitions]
+
+    B3 --> E1[Détection de corruption]
+    B3 --> E2[Protection en lecture seule]
+
+    B4 --> F1[Init]
+    B4 --> F2[Lancement des services]
+
+    classDef root fill:#222,color:#fff;
+    classDef layer fill:#333,color:#fff;
+    classDef detail fill:#444,color:#eee;
+
+    class B1,B2,B3,B4 layer;
+    class C1,C2,D1,D2,E1,E2,F1,F2 detail;
