@@ -1,0 +1,94 @@
+name: "🛡️ Security Report"
+description: "Signaler une vulnérabilité ou un risque de sécurité dans le système"
+title: "[SECURITY] "
+labels: ["security"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de signaler cette vulnérabilité. Les informations fournies ici seront traitées avec sérieux.  
+        Ne partage pas d’exploits publics ou de données sensibles dans ce formulaire.
+
+  - type: input
+    id: summary
+    attributes:
+      label: "Résumé de la vulnérabilité"
+      placeholder: "Exemple : contournement potentiel de SELinux via service X"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description détaillée"
+      description: "Explique le comportement, le risque et les conditions d’exploitation."
+      placeholder: |
+        - Contexte
+        - Conditions nécessaires
+        - Impact potentiel
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Étapes pour reproduire"
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Impact potentiel"
+      description: "Sécurité, confidentialité, intégrité, disponibilité…"
+      placeholder: "Exemple : élévation de privilèges, fuite de données…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs / preuves techniques"
+      render: shell
+      placeholder: |
+        adb logcat -b all
+        dmesg | grep ...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: "Composant concerné"
+      options:
+        - SELinux
+        - AVB / Verified Boot
+        - KeyStore / KeyMint
+        - Binder / IPC
+        - Kernel
+        - Services système
+        - HAL / AIDL
+        - Réseau / TLS
+        - Autre
+    validations:
+      required: true
+
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: "Mitigation proposée (optionnel)"
+      placeholder: "Idées de correctifs, durcissement, patch…"
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes supplémentaires"
+      placeholder: "Références, contexte, liens…"
