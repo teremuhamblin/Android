@@ -1,0 +1,63 @@
+name: "RFC Validation"
+
+on:
+  pull_request:
+    paths:
+      - "rfc/**"
+      - ".github/ISSUE_TEMPLATE/rfc_proposal.yml"
+
+jobs:
+  validate-rfc:
+    name: "Validation des RFC"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout du dépôt"
+        uses: actions/checkout@v4
+
+      - name: "Installation de Perl"
+        run: sudo apt-get update && sudo apt-get install -y perl
+
+      - name: "Validation du nom de fichier"
+        run: |
+          invalid=$(ls rfc | grep -vE '^rfc-[0-9]{4}-.*\.md$' || true)
+          if [ ! -z "$invalid" ]; then
+            echo "❌ Nom de fichier RFC invalide :"
+            echo "$invalid"
+            exit 1
+          fi
+
+      - name: "Validation du contenu RFC"
+        run: |
+          for file in rfc/rfc-*.md; do
+            echo "🔍 Vérification de $file"
+            perl -ne '
+              BEGIN { %sections = (
+                "Résumé" => 0,
+                "Motivation" => 0,
+                "Contexte" => 0,
+                "Proposition" => 0,
+                "Alternatives" => 0,
+                "Impact" => 0,
+                "Plan de migration" => 0,
+                "Risques" => 0,
+                "Références" => 0
+              ); }
+              if (/^##\s+(.*)/) {
+                my $title = $1;
+                foreach my $s (keys %sections) {
+                  $sections{$s} = 1 if $title =~ /$s/;
+                }
+              }
+              END {
+                my @missing = grep { $sections{$_} == 0 } keys %sections;
+                if (@missing) {
+                  print "❌ Sections manquantes : @missing\n";
+                  exit 1;
+                }
+              }
+            ' "$file"
+          done
+
+      - name: "Validation terminée"
+        run: echo "✔️ Toutes les RFC sont valides."
