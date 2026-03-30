@@ -1,0 +1,29 @@
+flowchart TD
+
+    A[Isolation Android vs Containers]:::root
+
+    A --> B1[Android]
+    A --> B2[Containers classiques]
+
+    B1 --> C1[UID par app]
+    B1 --> C2[SELinux enforcing]
+    B1 --> C3[Sandbox applicatif]
+    B1 --> C4[API contrôlées]
+    B1 --> C5[Virtualization Framework]
+
+    B2 --> D1[Namespaces]
+    B2 --> D2[Cgroups]
+    B2 --> D3[Rootfs isolé]
+    B2 --> D4[Images Docker/LXC]
+
+    C1 --> E1[Isolation par utilisateur Linux]
+    C2 --> E2[Confinement obligatoire]
+    C3 --> E3[Pas d’accès inter-app]
+    C5 --> E4[Micro-VMs]
+
+    classDef root fill:#222,color:#fff;
+    classDef layer fill:#333,color:#fff;
+    classDef detail fill:#444,color:#eee;
+
+    class B1,B2 layer;
+    class C1,C2,C3,C4,C5,D1,D2,D3,D4,E1,E2,E3,E4 detail;
