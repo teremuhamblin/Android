@@ -1,0 +1,81 @@
+name: "📐 RFC Proposal"
+description: "Proposer un changement d’architecture, un nouveau module ou une évolution majeure"
+title: "[RFC] "
+labels: ["rfc", "architecture"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ce formulaire permet de proposer une évolution structurante du projet.  
+        Les RFC servent à discuter, documenter et valider les décisions d’architecture.
+
+  - type: input
+    id: title
+    attributes:
+      label: "Titre de la proposition"
+      placeholder: "Exemple : Nouveau service système pour la gestion des clés"
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Motivation"
+      description: "Quel problème cette RFC résout-elle ?"
+      placeholder: |
+        - Limitation actuelle
+        - Problème identifié
+        - Contexte technique
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposition détaillée"
+      description: "Décris la solution envisagée."
+      placeholder: |
+        - Architecture
+        - API / HAL / services concernés
+        - Diagrammes Mermaid recommandés
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives considérées"
+      placeholder: "Autres approches possibles…"
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Impact"
+      description: "Impact sur le système, la sécurité, la compatibilité, la documentation…"
+      placeholder: |
+        - Sécurité
+        - Performance
+        - Maintenabilité
+        - Compatibilité ascendante
+    validations:
+      required: true
+
+  - type: textarea
+    id: migration
+    attributes:
+      label: "Plan de migration (si applicable)"
+      placeholder: "Étapes de transition, dépréciation, compatibilité…"
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: "Références"
+      placeholder: "Liens, documents, standards, schémas…"
+    validations:
+      required: false
