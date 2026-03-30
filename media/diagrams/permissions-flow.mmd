@@ -1,0 +1,32 @@
+flowchart TD
+
+    A[Cycle des permissions Android]:::root
+
+    A --> B1[Déclaration dans le manifeste]
+    A --> B2[Demande runtime]
+    A --> B3[Décision utilisateur]
+    A --> B4[Enforcement par le framework]
+    A --> B5[Contrôle par SELinux]
+
+    B1 --> C1[normal]
+    B1 --> C2[dangerous]
+    B1 --> C3[signature]
+
+    B2 --> D1[Boîte de dialogue système]
+
+    B3 --> E1[Autorisé]
+    B3 --> E2[Refusé]
+    B3 --> E3[Refusé définitivement]
+
+    B4 --> F1[API bloquées si refus]
+    B4 --> F2[Restrictions d’arrière-plan]
+
+    B5 --> G1[Domaines SELinux]
+    B5 --> G2[Blocage kernel-level]
+
+    classDef root fill:#222,color:#fff;
+    classDef layer fill:#333,color:#fff;
+    classDef detail fill:#444,color:#eee;
+
+    class B1,B2,B3,B4,B5 layer;
+    class C1,C2,C3,D1,E1,E2,E3,F1,F2,G1,G2 detail;
