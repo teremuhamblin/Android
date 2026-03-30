@@ -1,0 +1,47 @@
+name: "✨ Feature Request"
+description: "Proposer une nouvelle fonctionnalité ou amélioration"
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de proposer une amélioration ou une nouvelle fonctionnalité. Décris clairement l’objectif et l’impact attendu.
+
+  - type: input
+    id: summary
+    attributes:
+      label: "Résumé de la fonctionnalité"
+      placeholder: "Exemple : Ajouter un service système pour gérer X"
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Motivation"
+      description: "Pourquoi cette fonctionnalité est-elle nécessaire ?"
+      placeholder: "Problème actuel, limitations, contexte…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposition"
+      description: "Décris la solution envisagée."
+      placeholder: |
+        - Nouveau module
+        - Modification d’un service existant
+        - Ajout d’un HAL / AIDL
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Impact"
+      description: "Impact sur le système, la sécurité, la documentation, etc."
+      placeholder: "Compatibilité, performance, sécurité
