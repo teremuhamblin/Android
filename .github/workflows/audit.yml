@@ -1,0 +1,44 @@
+name: "Audit Android Project"
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  audit:
+    name: "Audit global"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout du dépôt"
+        uses: actions/checkout@v4
+
+      - name: "Installation de Perl"
+        run: sudo apt-get update && sudo apt-get install -y perl
+
+      - name: "Installation de Ruby"
+        run: sudo apt-get install -y ruby-full
+
+      - name: "Vérification de la version Perl"
+        run: perl -v
+
+      - name: "Vérification de la version Ruby"
+        run: ruby -v
+
+      - name: "Audit documentation"
+        run: make docs-all
+
+      - name: "Audit sécurité"
+        run: make security-all
+
+      - name: "Audit AIDL"
+        run: make aidl
+
+      - name: "Audit global"
+        run: make audit
