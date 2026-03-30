@@ -1,0 +1,27 @@
+flowchart TD
+
+    A[Virtualization Framework Android]:::root
+
+    A --> B1[Hyperviseur KVM]
+    A --> B2[Micro-VMs]
+    A --> B3[Services isolés]
+    A --> B4[Cas d’usage]
+
+    B1 --> C1[Isolation matérielle]
+    B1 --> C2[Exécution sécurisée]
+
+    B2 --> D1[VMs légères]
+    B2 --> D2[Environnements dédiés]
+
+    B3 --> E1[Services sensibles]
+    B3 --> E2[Modules de sécurité]
+
+    B4 --> F1[Sandbox renforcé]
+    B4 --> F2[Confidentialité accrue]
+
+    classDef root fill:#222,color:#fff;
+    classDef layer fill:#333,color:#fff;
+    classDef detail fill:#444,color:#eee;
+
+    class B1,B2,B3,B4 layer;
+    class C1,C2,D1,D2,E1,E2,F1,F2 detail;
