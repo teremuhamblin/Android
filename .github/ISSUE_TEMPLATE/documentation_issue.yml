@@ -1,0 +1,41 @@
+name: "📘 Documentation Issue"
+description: "Signaler un problème ou proposer une amélioration de la documentation"
+title: "[DOC] "
+labels: ["documentation"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci d’aider à améliorer la documentation. Indique clairement ce qui doit être corrigé ou ajouté.
+
+  - type: input
+    id: location
+    attributes:
+      label: "Emplacement du document"
+      placeholder: "Exemple : 10-system/README.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: "Problème"
+      placeholder: "Erreur, manque d’information, incohérence…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposition d’amélioration"
+      placeholder: "Texte à ajouter, reformulation, schéma à créer…"
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes supplémentaires"
+      placeholder: "Contexte, exemples, références…"
