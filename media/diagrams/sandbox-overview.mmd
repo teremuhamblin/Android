@@ -1,0 +1,35 @@
+flowchart TD
+
+    A[Sandbox Android]:::root
+
+    A --> B1[Isolation par UID]
+    A --> B2[SELinux enforcing]
+    A --> B3[Permissions]
+    A --> B4[API contrôlées]
+    A --> B5[Processus isolés]
+    A --> B6[WebView sandbox]
+
+    B1 --> C1[UID unique par application]
+    B1 --> C2[Stockage privé /data/data]
+
+    B2 --> D1[Domaine untrusted_app]
+    B2 --> D2[Politiques strictes]
+
+    B3 --> E1[Permissions runtime]
+    B3 --> E2[Permissions dangereuses]
+
+    B4 --> F1[Accès matériel filtré]
+    B4 --> F2[Contrôle des IPC]
+
+    B5 --> G1[Pas d’accès au stockage]
+    B5 --> G2[Pas d’héritage de permissions]
+
+    B6 --> H1[Processus dédié]
+    B6 --> H2[Isolation du contenu web]
+
+    classDef root fill:#222,color:#fff,stroke:#555;
+    classDef layer fill:#333,color:#fff;
+    classDef detail fill:#444,color:#eee;
+
+    class B1,B2,B3,B4,B5,B6 layer;
+    class C1,C2,D1,D2,E1,E2,F1,F2,G1,G2,H1,H2 detail;
