@@ -1,0 +1,27 @@
+flowchart TD
+
+    A[Chiffrement des données Android]:::root
+
+    A --> B1[FBE]
+    A --> B2[KeyStore matériel]
+    A --> B3[Clés dérivées du code]
+    A --> B4[Déverrouillage utilisateur]
+
+    B1 --> C1[Chiffrement par fichier]
+    B1 --> C2[Différents contextes de clés]
+
+    B2 --> D1[Clés inexportables]
+    B2 --> D2[TEE / StrongBox]
+
+    B3 --> E1[Derivation via scrypt]
+    B3 --> E2[Protection contre brute-force]
+
+    B4 --> F1[Déverrouillage écran]
+    B4 --> F2[Déchiffrement des données]
+
+    classDef root fill:#222,color:#fff;
+    classDef layer fill:#333,color:#fff;
+    classDef detail fill:#444,color:#eee;
+
+    class B1,B2,B3,B4 layer;
+    class C1,C2,D1,D2,E1,E2,F1,F2 detail;
