@@ -1,0 +1,97 @@
+name: "🐛 Bug Report"
+description: "Signaler un bug dans le système, la documentation ou les outils"
+title: "[BUG] "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de décrire ce bug. Fournis autant de détails que possible pour faciliter l’analyse.
+
+  - type: input
+    id: summary
+    attributes:
+      label: "Résumé du problème"
+      description: "Décris brièvement le bug."
+      placeholder: "Exemple : Crash du service SystemServer au démarrage"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Étapes pour reproduire"
+      description: "Liste les étapes permettant de reproduire le problème."
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Comportement attendu"
+      description: "Décris ce qui aurait dû se produire."
+      placeholder: "Le service devrait démarrer sans erreur."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: "Comportement observé"
+      description: "Décris ce qui s’est réellement produit."
+      placeholder: "Le service plante avec une NullPointerException."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs / captures"
+      description: "Ajoute des extraits de logs, captures d’écran ou traces utiles."
+      render: shell
+      placeholder: |
+        adb logcat -b all
+        stacktrace…
+    validations:
+      required: false
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: "Composant concerné"
+      description: "Sélectionne la zone impactée."
+      options:
+        - Système (10-system)
+        - Sécurité (20-security)
+        - Outils (30-tools)
+        - Développement (40-development)
+        - Déploiement (50-deployment)
+        - Tests (60-testing)
+        - Documentation (70-guidelines / 80-reference)
+        - Autre
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: "Environnement"
+      description: "Version Android, device, build ID, etc."
+      placeholder: "Android 14, Pixel 6, build xyz123"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes supplémentaires"
+      description: "Ajoute toute information utile."
+      placeholder: "Hypothèses, pistes, contexte…"
+    validations:
+      required: false
