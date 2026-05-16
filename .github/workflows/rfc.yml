@@ -6,6 +6,9 @@ on:
       - "rfc/**"
       - ".github/ISSUE_TEMPLATE/rfc_proposal.yml"
 
+permissions:
+  contents: read
+
 jobs:
   validate-rfc:
     name: "Validation des RFC"
